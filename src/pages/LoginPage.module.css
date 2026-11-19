@@ -1,0 +1,59 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-5) var(--space-4);
+}
+.box {
+  width: 100%;
+  max-width: 440px;
+  padding: var(--space-6) var(--space-5);
+  border: 1px solid var(--color-line);
+  border-radius: 24px;
+  background: var(--color-bg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  margin: var(--space-5) 0 var(--space-3);
+  font-size: clamp(28px, 7vw, 34px);
+}
+.tabs {
+  display: flex;
+  width: 100%;
+  margin: var(--space-4) 0;
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+}
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tabActive {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: left;
+}
+.form button {
+  margin-top: var(--space-2);
+}
+.note {
+  margin-top: var(--space-4);
+  font-size: 13px;
+}

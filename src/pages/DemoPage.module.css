@@ -1,0 +1,80 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: var(--space-5);
+}
+.row:last-child {
+  margin-bottom: 0;
+}
+.rowHead {
+  display: flex;
+  justify-content: space-between;
+}
+.row input[type='range'] {
+  width: 100%;
+  accent-color: #000;
+}
+.result {
+  background: var(--color-text);
+  color: var(--color-bg);
+  position: sticky;
+  top: 90px;
+}
+.result :global(.muted) {
+  color: #bdbdbd;
+}
+.price {
+  font-size: clamp(34px, 6vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: var(--space-3) 0;
+}
+.err {
+  margin: var(--space-3) 0;
+}
+.formula {
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .result {
+    position: static;
+  }
+}
+.ranks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+}
+.rank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 4px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: 12px;
+}
+.rank b {
+  font-size: 18px;
+}
+.rankActive {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+.note {
+  margin-top: var(--space-3);
+  font-size: 13px;
+}

@@ -1,0 +1,116 @@
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+.balance b {
+  font-size: 22px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  font-size: 14px;
+}
+.title {
+  margin-bottom: var(--space-3);
+}
+.bid {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 var(--space-3);
+}
+.toggle {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.history {
+  list-style: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  font-size: 14px;
+}
+.history li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: 8px 0;
+  border-top: 1px solid var(--color-line);
+}
+.stages {
+  list-style: none;
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+}
+.stages li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px 14px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+.stages li span {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  font-size: 12px;
+}
+.stageDone {
+  color: var(--color-text) !important;
+  border-color: var(--color-border) !important;
+}
+.stages li.stageNow {
+  background: var(--color-text);
+  color: var(--color-bg) !important;
+  border-color: var(--color-border) !important;
+}
+.burn {
+  margin-bottom: var(--space-5);
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  .stages {
+    grid-template-columns: 1fr 1fr;
+  }
+}
